@@ -12,7 +12,7 @@ class ArticlesViewModel: NSObject {
     weak var coordinator: AppCoordinator?
     var bindArticlesViewModelToController: DefualtComletion = {}
 
-    private(set) var articles: [Article]! {
+    private(set) var articles: [Article]? {
         didSet {
             self.bindArticlesViewModelToController()
         }

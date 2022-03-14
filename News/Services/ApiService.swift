@@ -12,9 +12,10 @@ class APIService :  NSObject {
     static let shared = APIService()
     private var dataTask: URLSessionDataTask?
     
-    func apiToGetData<T: Codable>(completion : @escaping Completion<T>){
+    func apiToGetData<T: Codable>(completion : @escaping Completion<T>) {
         
-        let endPoint = "https://newsapi.org/v2/everything?q=tesla&from=2022-02-13&sortBy=publishedAt&apiKey=60a09c3c72d5428e938e9cc61a4c2f0a"
+        let date = DateService.shared.getCurrentDate()
+        let endPoint = "https://newsapi.org/v2/everything?q=tesla&from=\(date)&sortBy=publishedAt&apiKey=60a09c3c72d5428e938e9cc61a4c2f0a"
         guard let url = URL(string: endPoint) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in

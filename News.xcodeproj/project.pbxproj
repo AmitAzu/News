@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2FC4B26488DD66E21BB23C83 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5198C5B69D7FC5C52ED7C176 /* Pods_News.framework */; };
+		8D6721C827DF5EE1009AFD01 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6721C727DF5EE1009AFD01 /* DateService.swift */; };
 		8DE51B7027DE4FA400C00549 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE51B6F27DE4FA400C00549 /* AppDelegate.swift */; };
 		8DE51B7927DE4FA500C00549 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DE51B7827DE4FA500C00549 /* Assets.xcassets */; };
 		8DE51B7C27DE4FA500C00549 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE51B7A27DE4FA500C00549 /* LaunchScreen.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		5198C5B69D7FC5C52ED7C176 /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C35BF5C141AFC4D988AC5B4 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
+		8D6721C727DF5EE1009AFD01 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		8DE51B6C27DE4FA400C00549 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE51B6F27DE4FA400C00549 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DE51B7827DE4FA500C00549 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				8DE51B9027DE561100C00549 /* ApiService.swift */,
+				8D6721C727DF5EE1009AFD01 /* DateService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6721C827DF5EE1009AFD01 /* DateService.swift in Sources */,
 				8DECCB9B27DE6D45005C0088 /* Extenstion.swift in Sources */,
 				8DE51B9727DE578A00C00549 /* Article.swift in Sources */,
 				8DECCB8D27DE66C0005C0088 /* ArticlesTableViewCell.swift in Sources */,

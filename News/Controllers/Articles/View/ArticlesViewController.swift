@@ -58,19 +58,22 @@ class ArticlesViewController: UIViewController {
 extension ArticlesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.articles.count ?? 0
+        return viewModel?.articles?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ArticlesTableViewCell", for: indexPath) as! ArticlesTableViewCell
         
-        let articel = viewModel!.articles[indexPath.row]
-        cell.configureCell(articel: articel)
+        if let articel = viewModel!.articles?[indexPath.row] {
+            cell.configureCell(articel: articel)
+        }
         
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel!.coordinator?.pushArticelsDetailsVC(viewModel!.articles[indexPath.row])
+        if let articles = viewModel!.articles?[indexPath.row] {
+            viewModel!.coordinator?.pushArticelsDetailsVC(articles)
+        }
     }
 }
